@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on FUCdata_interp = np.empty([RUCdata.shape[0],zlength_features])
-
 @author: mkubacki
+
+For use with RF_model.py
+
+input: original RUCdata pandas dataframe (output from read_data_RF.py)
+
+output: RUCdata pandas dataframe with fixed height grid
 
 This function converts the pandas dataframe with varying height levels into
 a pandas dataframe with a fixed height grid comprised of the average heights
@@ -23,12 +27,12 @@ fixed vertical grid above ground level.
 
 Output dataframe is
 
-          temp1 temp2 ... temp37 ...  p1 ...  p66               event          
-    0       t01   t02 ...   t037 ... p37 ... p037    weakly\ntornadic
-    1       t11   t12 ...   t137 ... p37 ... p137    weakly\ntornadic
-    2       t21   t22 ...   t237 ... p37 ... p237         nontornadic
-    3       t31   t32 ...   t337 ... p37 ... p337         nontornadic
-    4       t41   t42 ...   t437 ... p37 ... p437         nontornadic
+          temp1 temp2 ... temp37 ...  p1  ... p37               event          
+    0       t01   t02 ...   t037 ...  p01 ... p037    weakly\ntornadic
+    1       t11   t12 ...   t137 ...  p11 ... p137    weakly\ntornadic
+    2       t21   t22 ...   t237 ...  p21 ... p237         nontornadic
+    3       t31   t32 ...   t337 ...  p31 ... p337         nontornadic
+    4       t41   t42 ...   t437 ...  p41 ... p437         nontornadic
     
 where the feature entries (e.g. t01, t02) are the interpolated values from the
 original feature vector entries [t01,t02,...].

@@ -19,6 +19,13 @@ to create decision trees and and classify each sample as one of the following:
     1. nontornadic (class [0])
     2. weakly tornadic (class [1])
     3. significantly tornadic (class [2])
+    
+Execution and output: Before executing this code download files read_data_RF.py 
+and interpolate_avg_height.py. Change directory path to desired location (line 45).
+Execute script.  Output will be a timestamped folder containing two files. 
+Summary file (summmary.txt) contains settings, accuracy score, and confusion 
+table. Feature importance file (feature_importance.txt) contains feature
+importance scores.
 
 """
 import os
